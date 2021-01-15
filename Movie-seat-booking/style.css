@@ -13,8 +13,17 @@ body {
   height: 100vh;
   font-family: 'Lato', sans-serif;
 }
+
+video {
+  width: 200px;
+
+  padding-bottom: 200px;
+  perspective: 1000px;
+}
+
 .movie-container {
   margin: 20px 0;
+  padding-bottom: 200px;
 }
 
 .movie-container select {
