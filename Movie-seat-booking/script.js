@@ -18,11 +18,22 @@ movieSelect.addEventListener('change', e => {
 function updateSelectedCount(){
     //Creates an empty node list.
     const selectedSeats = document.querySelectorAll('.row .seat.selected');
+
+    const seatIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
+    
+    localStorage.setItem('selectedSeats', JSON.stringify(seatIndex));
+
     const selectedSeatsCount = selectedSeats.length;
     count.innerText = selectedSeatsCount;
     total.innerText = selectedSeatsCount * ticketPrice;
     console.log(selectedSeatsCount * ticketPrice);
 }
+
+//Copy selected seats into array
+//Map through array
+//Return a new array index
+
+
 
 
 //Toggles seats to occupied or not occupied
